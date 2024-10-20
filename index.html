@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vẫn còn là 20/10 :DDD</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Đăng nhập</h2>
+        <form>
+            <input type="text" placeholder="Tên đăng nhập" required>
+            <input type="password" placeholder="Mật khẩu" required>
+            <button type="button" onclick="validateLogin()">Đăng nhập</button>
+            <button type="button" class="password-hint" onclick="toggleHint()">Gợi ý nhập mật khẩu</button>
+        </form>
+        <div class="hint-message" id="hintMessage">
+            <p>Gợi ý mật khẩu: </p> Name: Tên của bạn </p> Password: Ngày hôm nay</p>
+        </div>        
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>

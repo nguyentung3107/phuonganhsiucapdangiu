@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+}
+
+.login-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center; /* Căn giữa chữ nhập vào */
+}
+
+
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-container button:hover {
+    background-color: #45a049;
+}
+
+.login-container {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: none; /* Loại bỏ hiệu ứng bóng */
+    max-width: 300px; /* Thu nhỏ kích thước */
+    width: 100%;
+    background-color: transparent; /* Loại bỏ nền */
+}
+.password-hint {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.password-hint:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* Hiệu ứng khi di chuột đến các ô nhập liệu và nút bấm */
+.login-container input[type="text"],
+.login-container input[type="password"],
+.login-container button {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-container input[type="text"]:hover,
+.login-container input[type="password"]:hover,
+.login-container button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.login-container .password-hint:hover {
+    text-decoration: underline;
+}
+
+.hint-message {
+    display: block; /* Thay đổi display từ 'none' sang 'block' để có thể áp dụng transition */
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    text-align: center;
+    color: #333;
+    opacity: 0; /* Đặt ban đầu là trong suốt */
+    visibility: hidden; /* Ban đầu không hiển thị */
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out; /* Hiệu ứng chuyển đổi */
+}
+

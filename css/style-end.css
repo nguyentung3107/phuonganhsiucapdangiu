@@ -1,0 +1,193 @@
+/* Thiết lập Grid Layout cho trang web */
+body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Chia trang thành ba cột bằng nhau */
+    grid-template-rows: auto; /* Chiều cao của hàng tự động theo nội dung */
+    gap: 0; /* Loại bỏ khoảng cách giữa các cột */
+    height: 100vh; /* Chiều cao của toàn bộ trang web bằng chiều cao của màn hình */
+    margin: 0; /* Xóa margin mặc định của body */
+    font-family: Arial, sans-serif; /* Lựa chọn font chữ */
+    background-image: url('../img/iput-bg.jpg'); /* Thay đổi hình nền bằng ảnh */
+    background-size: cover; /* Kích thước ảnh lấp đầy toàn bộ màn hình */
+    background-position: center; /* Căn giữa ảnh */
+    background-repeat: no-repeat; /* Không lặp lại ảnh */
+    overflow: hidden; /* Loại bỏ thanh trượt ngang dọc */
+}
+
+/* Loại bỏ nền của các phần (section) */
+.section-1, .section-2, .section-3 {
+    background-color: transparent;
+}
+
+/* Thiết lập nền màu và tập trung các thành phần vào giữa trang */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Phần 1: Trống */
+.section-1 {
+    background-color: transparent;
+}
+
+/* Phần 2: Ô Xin chào */
+.section-2 {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 100vh; /* Chiều cao tối đa của phần 2 là chiều cao của màn hình */
+}
+
+.welcome-box {
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 80%; /* Giới hạn chiều rộng của ô chào */
+    max-height: 90vh; /* Giới hạn chiều cao của ô chào, nhỏ hơn 100vh để tránh tràn màn hình */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: linear-gradient(to bottom, #006600, #00cc00); /* Gradient từ màu xanh đậm đến nhạt */
+    background-image: url('../img/gradient.jpg'); /* Thay đổi hình nền cho ô Xin chào */
+    background-size: cover; /* Kích thước ảnh lấp đầy ô */
+    background-repeat: no-repeat; /* Không lặp lại ảnh trong ô */
+}
+
+.welcome-image {
+    max-width: 60%; /* Thu nhỏ chiều rộng ảnh còn 60% */
+    max-height: 50%; /* Hình ảnh không vượt quá chiều cao của .welcome-box */
+    object-fit: contain; /* Bảo tồn tỷ lệ khung hình của hình ảnh */
+    display: block; /* Hiển thị hình ảnh dưới dạng block để căn giữa */
+    margin: auto; /* Canh giữa hình ảnh */
+}
+
+/* Phần 2: Ô Xin chào */
+.section-2 {
+    background-color: transparent; /* Loại bỏ nền cho phần này */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 100vh; /* Chiều cao tối đa của phần 2 là chiều cao của màn hình */
+}
+
+.welcome-box {
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 80%; /* Giới hạn chiều rộng của ô chào */
+    max-height: 90vh; /* Giới hạn chiều cao của ô chào, nhỏ hơn 100vh để tránh tràn màn hình */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent; /* Bỏ nền cho ô "Xin chào" */
+}
+
+.welcome-content {
+    background-color: transparent; /* Bỏ nền cho nội dung */
+    padding: 10px; /* Đệm nội dung */
+    margin-top: 10px; /* Khoảng cách giữa ảnh và nội dung */
+    text-align: center; /* Căn giữa nội dung */
+    color: white; /* Thay đổi màu chữ thành màu trắng */
+}
+
+/* Nút bấm Xem tiếp */
+.btn {
+    display: inline-block; /* Hiển thị như một khối inline */
+    margin-top: 15px; /* Khoảng cách từ nội dung */
+    padding: 10px 20px; /* Đệm cho nút */
+    background-color: #007BFF; /* Màu nền cho nút */
+    color: white; /* Màu chữ */
+    border: none; /* Không viền */
+    border-radius: 5px; /* Bo tròn góc */
+    text-decoration: none; /* Không gạch chân */
+    font-size: 16px; /* Kích thước chữ */
+    transition: background-color 0.3s; /* Hiệu ứng chuyển màu */
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Màu nền khi hover */
+}
+
+
+/* Phần 3: Trống */
+.section-3 {
+    background-color: transparent;
+}
+
+/* Hiệu ứng loading */
+.loading-container {
+    display: flex;
+    justify-content: space-between;
+    width: 50vw; /* Sử dụng đơn vị vw để tương thích với nhiều kích thước màn hình */
+    max-width: 200px; /* Giới hạn chiều rộng tối đa */
+    height: 15vh; /* Sử dụng đơn vị vh cho chiều cao */
+    max-height: 100px; /* Giới hạn chiều cao tối đa */
+    opacity: 1; /* Độ mờ ban đầu */
+    transition: opacity 1s ease-in-out; /* Hiệu ứng mờ dần */
+}
+
+.loading-bar {
+    width: 10%; /* Chiều rộng mỗi cột */
+    height: 30%; /* Chiều cao mỗi cột */
+    background-color: white;
+    transform-origin: center; /* Điểm xoay ở giữa */
+    animation: soundBars 1s infinite ease-in-out; /* Hiệu ứng cho cột */
+    margin: 0; /* Xóa khoảng cách giữa các cột */
+}
+
+@keyframes soundBars {
+    0%, 100% {
+        transform: scaleY(0.2); /* Thu nhỏ */
+    }
+    50% {
+        transform: scaleY(1.8); /* Mở rộng */
+    }
+}
+
+.loading-bar:nth-child(1) { animation-delay: 0s; }
+.loading-bar:nth-child(2) { animation-delay: 0.1s; }
+.loading-bar:nth-child(3) { animation-delay: 0.2s; }
+.loading-bar:nth-child(4) { animation-delay: 0.3s; }
+.loading-bar:nth-child(5) { animation-delay: 0.4s; }
+
+/* Nội dung */
+.content {
+    display: none; /* Ẩn nội dung ban đầu */
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    padding: 20px;
+}
+
+/* Media queries để tương thích với các thiết bị khác nhau */
+@media (max-width: 768px) {
+    .loading-container {
+        width: 70vw;
+        height: 20vh;
+    }
+
+    .welcome-box {
+        padding: 10vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .loading-container {
+        width: 90vw;
+        height: 25vh;
+    }
+
+    .loading-bar {
+        width: 15%;
+    }
+
+    .welcome-box {
+        padding: 15vw;
+        font-size: 4vw;
+    }
+}
